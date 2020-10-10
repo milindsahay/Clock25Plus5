@@ -1,24 +1,22 @@
 import React from "react";
 
-const Buttons = ({ stop, setStop, refresh, setRefresh }) => {
+const Buttons = ({ stop, setStop, setRefresh }) => {
   const toggle = () => {
     setStop(!stop);
   };
   return (
     <div>
       <div className="row">
-        <div className="col-1">
+        <div className="col-12 text-center">
           <span role="button" onClick={toggle}>
             <i className="fa fa-play"></i>
           </span>
-        </div>
-        <div className="col-1">
-          <span role="button" onClick={toggle}>
+
+          <span className="ml-4" role="button" onClick={toggle}>
             <i className="fa fa-stop"></i>
           </span>
-        </div>
-        <div className="col-1">
-          <span role="button" onClick={() => setRefresh(true)}>
+
+          <span className="ml-4" role="button" onClick={() => setRefresh(true)}>
             <i className="fa fa-refresh"></i>
           </span>
         </div>

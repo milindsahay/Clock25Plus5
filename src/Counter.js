@@ -26,7 +26,11 @@ const Counter = (props) => {
   return (
     <div>
       <div className="row">
-        <div className="col-1">
+        <div className="col-3 text-center offset-3">Session length</div>
+        <div className="col-3 text-left offset-1">Break length</div>
+      </div>
+      <div className="row">
+        <div className="col-1 offset-3">
           <div role="button" onClick={stop ? increaseWork : undefined}>
             <i className="fa fa-angle-up"></i>
           </div>
@@ -35,9 +39,9 @@ const Counter = (props) => {
           </div>
         </div>
 
-        <div className="col-5">{work}</div>
+        <div className="col-2 align-self-center">{work}</div>
 
-        <div className="col-1">
+        <div className="col-1 offset-1">
           <div role="button" onClick={stop ? increaseOff : undefined}>
             <i className="fa fa-angle-up"></i>
           </div>
@@ -46,7 +50,7 @@ const Counter = (props) => {
           </div>
         </div>
 
-        <div className="col-5">{off}</div>
+        <div className="col-2 align-self-center ">{off}</div>
       </div>
     </div>
   );
