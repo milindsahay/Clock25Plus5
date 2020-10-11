@@ -15,6 +15,7 @@ const Clock = (props) => {
   useEffect(() => {
     {
       if (refresh) {
+        setStop(true);
         setTime(value);
         setRefresh(!refresh);
       }
@@ -22,6 +23,10 @@ const Clock = (props) => {
       if (time == -1) {
         setEnd(!end);
         setTime(value);
+        var audio = new Audio(
+          "https://media.geeksforgeeks.org/wp-content/uploads/20190531135120/beep.mp3"
+        );
+        audio.play();
       }
 
       if (!stop) {
@@ -41,14 +46,14 @@ const Clock = (props) => {
   return (
     <div>
       <div className="row">
-        <h1
-          className="col-12 text-center"
+        <div
+          className="col-12 text-center time"
           css={css`
             color: ${time < 60 ? "red" : "black"};
           `}
         >
           {display}
-        </h1>
+        </div>
       </div>
     </div>
   );

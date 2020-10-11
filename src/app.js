@@ -1,7 +1,5 @@
-/** @jsx jsx */
 import React, { useState } from "react";
 import { render } from "react-dom";
-import { jsx, css, Global } from "@emotion/core";
 
 import Counter from "./Counter";
 import Clock from "./Clock";
@@ -13,36 +11,9 @@ const App = () => {
   const [stop, setStop] = useState(true);
   const [refresh, setRefresh] = useState(false);
   const [end, setEnd] = useState(false);
-  //To add => refresh
   return (
-    <div
-      className="container"
-      css={css`
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        padding: 2em;
-        background-color: white;
-        max-width: 600px;
-        transition: all 1.5s;
-      `}
-    >
-      <Global
-        styles={css`
-          body {
-            background: cyan;
-            margin: 0;
-            padding: 0;
-            min-height: "100vh";
-            max-width: "100vw";
-            transition: all 1.5s;
-          }
-        `}
-      />
-      <h1 className="text-center">25 + 5 Clock</h1>
+    <div className="container my-container">
+      <div className="title text-center">Timer</div>
       <Counter
         work={work}
         setWork={setWork}

@@ -8,15 +8,27 @@ const Buttons = ({ stop, setStop, setRefresh }) => {
     <div>
       <div className="row">
         <div className="col-12 text-center">
-          <span role="button" onClick={toggle}>
+          <span
+            className="btn btn-outline-dark my-btn"
+            role="button"
+            onClick={toggle}
+          >
             <i className="fa fa-play"></i>
           </span>
 
-          <span className="ml-4" role="button" onClick={toggle}>
+          <span
+            className="ml-4 btn btn-outline-dark my-btn"
+            role="button"
+            onClick={toggle}
+          >
             <i className="fa fa-stop"></i>
           </span>
 
-          <span className="ml-4" role="button" onClick={() => setRefresh(true)}>
+          <span
+            className="ml-4 btn btn-outline-dark my-btn"
+            role="button"
+            onClick={() => setRefresh(true)}
+          >
             <i className="fa fa-refresh"></i>
           </span>
         </div>
